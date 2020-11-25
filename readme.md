@@ -16,11 +16,11 @@ BenchmarkZeroUnCaller-12         3565722               340 ns/op              64
 BenchmarkZeroCaller-12            901479              1355 ns/op             288 B/op          5 allocs/op
 ```
 
-- BenchmarkLogbud是经过logbud编辑后的压测，基本接近原生；
+- BenchmarkLogbud：是经过logbud编译后的压测，基本接近原生；
 
-- BenchmarkZeroUnCaller 使用了zerolog并不打印文件与行号信息，发现与原生非常提接近了；
-- BenchmarkZeroCaller zerolog调用了运行时的栈，收集了行号与文件信息，发现与logbud相差接近5倍的性能；
-- BenchmarkLogrus logrus调用了运行时的栈，收集了行号与文件信息，与zerologCaller相差接近4倍，与logbud相差接近20倍性能；
+- BenchmarkZeroUnCaller：使用了zerolog并不打印文件与行号信息，发现与原生非常提接近了；
+- BenchmarkZeroCaller：zerolog调用了运行时的栈，收集了行号与文件信息，发现与logbud相差接近5倍的性能；
+- BenchmarkLogrus：logrus调用了运行时的栈，收集了行号与文件信息，与zerologCaller相差接近4倍，与logbud相差接近20倍性能；
 
 通过以上的性能测试数据，如果对性能要求足够高，logbudg有相当的优势；
 

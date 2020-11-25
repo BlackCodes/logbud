@@ -28,7 +28,7 @@ BenchmarkZeroCaller-12            901479              1355 ns/op             288
 
 ```shell
 #编译logbud
-git clone xx
+git clone https://github.com/BlackCodes/logbud.git
 cd logbud
 go build
 cp logud /usr/local/bin
